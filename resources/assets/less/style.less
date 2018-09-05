@@ -1,0 +1,189 @@
+
+@import "../css/bootstrap.css";
+
+body {
+  //background-color: #fefefe;
+  font-size: 16px;
+}
+
+.jumbotron {
+  background: #fd746c;
+  background: -webkit-linear-gradient(to left, #fd746c , #ff9068);
+  background: linear-gradient(to left, #fd746c , #ff9068);
+  color: #fff;
+
+  &.small {
+    padding: 20px 40px;
+  }
+
+  h1 {
+    color: #fff;
+
+    small {
+      color: #fff;
+      font-size: 50%;
+    }
+
+  }
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-user-container {
+  margin-top: 90px;
+}
+
+.panel-body {
+  img {
+    max-width: 100%;
+  }
+}
+
+@nav-list-width: 25%;
+
+.message-container {
+  background-color: #fff;
+  box-shadow: 0 0 20px -2px #777;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  width: 1280px;
+  left: 50%;
+  margin-left: -1280px/2;
+
+  @media screen and (max-width: 1280px) {
+    width:100%;
+    left: 0%;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    overflow: auto;
+  }
+
+  .message-list-container {
+    position: absolute;
+    width: @nav-list-width;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: solid 1px #ddd;
+
+    @media screen and (max-width: 767px) {
+      position: relative;
+      width: 100%;
+    }
+
+    .nouvelle-convo-btn-container {
+      padding: 20px 30px;
+    }
+
+
+    .threads-list-container {
+      border-top: solid 1px #ddd;
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .list-item {
+        padding: 20px 30px;
+        border-bottom: solid 1px #ddd;
+
+        &:hover, &.active {
+          background-color: #f1f1f1;
+        }
+
+      }
+
+    }
+
+  }
+
+  .message-detail-container {
+    position: absolute;
+    left: @nav-list-width;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    @media screen and (max-width: 767px) {
+      position: relative;
+      left: 0;
+    }
+
+    .messages {
+      padding: 40px 30px;
+      position: absolute;
+      overflow: auto;
+      bottom: 0;
+      top: 226px;
+      z-index: 0;
+
+      @media screen and (max-width: 767px) {
+        position: relative;
+        top: 0;
+      }
+
+      .well {
+        color: #fff;
+        border-radius: 5px;
+
+        &.me {
+          background-color: #FF9800;
+        }
+        &.other {
+          background-color: #2196F3;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          color: #fff;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        p {
+          margin: 0;
+        }
+
+      }
+    }
+
+    .nouveau-message-container {
+      background-color: #f1f1f1;
+      padding: 20px 45px;
+      position: relative;
+      z-index: 10;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 60px;
+      }
+
+      .help-block {
+        font-size: 11px;
+      }
+
+    }
+
+    .empty {
+      padding: 15% 20%;
+      text-align: center;
+    }
+
+  }
+
+}
+
+.easy-autocomplete {
+  width: 100% !important;
+}
+
+.contacts {
+  margin-top: 20px;
+}
